@@ -17,14 +17,18 @@
     "lighthousebot": "runlighthouse.js"
   },
   "scripts": {
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "minimist": "^1.2.0",
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
     "eslint-config-google": "^0.10.0"
-  }
+  },
+  "snyk": true
 }
